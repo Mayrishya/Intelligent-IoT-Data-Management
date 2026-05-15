@@ -64,19 +64,35 @@ border-radius: 2rem;
 }
 
 
-.selector-group {
-  display: flex;
-  /* gap: 1rem; */
-  margin-bottom: 0.2rem;
-  flex-wrap: wrap;
+
+.selector-group label { 
+ font-size: 0.95rem;
+ font-weight: 600;
+ color: var(--text-dark);
+ } 
+
+/* -----------------------------------------------------------
+   DROPDOWN AND INPUTS
+----------------------------------------------------------- */
+.selector-group select,
+.selector-group input {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  background: var(--bg-white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.selector-group label {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  padding-top: 5px;
+.selector-group select:focus,
+.selector-group input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  outline: none;
 }
+
+
 
 .chart-container {
   background: white;
